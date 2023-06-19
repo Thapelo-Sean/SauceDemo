@@ -201,7 +201,7 @@ public class loginTest extends testBase{
             testCase();
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
-            inventorypage.shoppingCard();
+            inventorypage.shoppingCart();
         } catch (Exception e) {
             e.printStackTrace();
         }
