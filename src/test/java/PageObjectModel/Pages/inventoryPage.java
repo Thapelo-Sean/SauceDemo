@@ -20,7 +20,7 @@ public class inventoryPage {
     @FindBy(how = How.ID, using = "add-to-cart-sauce-labs-bike-light") @CacheLookup
     WebElement getAddTocartBikeLightButton;
     @FindBy(how = How.ID, using = "shopping_cart_container") @CacheLookup
-    WebElement shoppingCart;
+    WebElement shoppingCartButton;
 
     public void addProductsToCart()
     {
@@ -32,11 +32,11 @@ public class inventoryPage {
             e.printStackTrace();
         }
     }
-    public void shoppingCardButton()
+    public void shoppingCard()
     {
         try
         {
-            shoppingCardButton();
+            shoppingCartButton.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
