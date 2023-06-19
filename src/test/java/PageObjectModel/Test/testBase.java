@@ -52,7 +52,7 @@ public class testBase {
             e.printStackTrace();
         }
     }
-    @BeforeSuite
+    @BeforeTest
     public void init()
     {
         try
