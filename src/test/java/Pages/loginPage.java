@@ -32,116 +32,33 @@ public class loginPage {
     @FindBy(how = How.ID, using = "login-button") @CacheLookup
     WebElement loginButton;
 
-    public void login()
+    public void setUsername(String stringUsername)
     {
-        //verify login with valid username and valid password
         try
         {
             username.clear();
-            username.sendKeys("standard_user");
-            password.clear();
-            password.sendKeys("secret_sauce");
-            loginButton.click();
-
-            //capture screenshot
-            TakesScreenshot screenshot = (TakesScreenshot)driver;
-            File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T1.pmg"));
-            logger.info("Screenshot for SAUC-T1 test case captured");
-            driver.navigate().to(baseUrl);
+            username.sendKeys(stringUsername);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        //verify login with valid username and invalid password
+    }
+    public void setPassword(String stringPassword)
+    {
         try
         {
-            username.clear();
-            username.sendKeys("standard_user");
             password.clear();
-            password.sendKeys("Invalid_Password");
-            loginButton.click();
-
-            //capture screenshot for valid username and invalid password
-            TakesScreenshot screenshot = (TakesScreenshot)driver;
-            File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T2.png"));
-            driver.navigate().to(baseUrl);
+            password.sendKeys(stringPassword);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //verify login with invalid username and valid password
+    }
+    public void clickLoginButton()
+    {
         try
         {
-            username.clear();
-            username.sendKeys("invalid_username");
-            password.clear();
-            password.sendKeys("secret_sauce");
             loginButton.click();
-
-            //capture screenshot
-            TakesScreenshot screenshot = (TakesScreenshot)driver;
-            File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshot/SAUC-T3.png"));
-            driver.navigate().to(baseUrl);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //verify login with valid username and empty password field
-
-        try
-        {
-            username.clear();
-            username.sendKeys("standard_user");
-            password.clear();
-            password.sendKeys("");
-            loginButton.click();
-
-            //Capture screenshot
-            TakesScreenshot screenshot = (TakesScreenshot)driver;
-            File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T4"));
-            driver.navigate().to(baseUrl);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //verify login with empty username and valid password
-        try
-        {
-            username.clear();
-            username.sendKeys("");
-            password.clear();
-            password.sendKeys("secret_sauce");
-            loginButton.click();
-
-            //Capture screenshot
-            TakesScreenshot screenshot = (TakesScreenshot)driver;
-            File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T5"));
-            driver.navigate().to(baseUrl);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //verify login with empty username field and empty password
-
-        try
-        {
-            username.clear();
-            username.sendKeys("");
-            password.clear();
-            password.sendKeys("");
-            loginButton.click();
-
-            //capture screenshot
-            TakesScreenshot screenshot = (TakesScreenshot)driver;
-            File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T6"));
-            driver.navigate().to(baseUrl);
-        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -44,8 +44,12 @@ public class testBase {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             }
+            else
+            {
+                throw new Exception("Incorrect browser");
+            }
         } catch (Exception e) {
-            throw new Exception("Incorrect browser");
+            e.printStackTrace();
         }
     }
     @BeforeSuite
