@@ -6,7 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed55588-21cd-407d-804a-9d361b7012e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Testcases.html" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Testcases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/checkout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/loginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/testBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/testBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +56,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/test/java/Test"
+    "last_opened_file_path": "C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Katan\OneDrive\Desktop\MyAutomation\SauceDemo" />
       <recent name="C:\Users\Katan\OneDrive\Desktop\MyAutomation\SauceDemo\src\test\java\Test" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="PageObjectModel.Pages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/test/java/PageObjectModel/Test/Test.XML">
     <configuration name="C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/test/java/PageObjectModel/Test/Test.XML" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemo" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/Test.XML" />
@@ -66,9 +79,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/test/java/PageObjectModel/Test/Test.XML" />
+        <item itemvalue="TestNG.C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/testng.xml" />
       </list>
     </recent_temporary>
   </component>
