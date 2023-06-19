@@ -218,6 +218,13 @@ public class loginTest extends testBase{
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("12345");
             checkoutPage.continueButton();
+            Thread.sleep(4000);
+
+            //Capture screenshot
+            TakesScreenshot screenshot = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshots/checkout.png"));
+            checkoutPage.finishButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
