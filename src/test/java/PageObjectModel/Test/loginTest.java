@@ -2,6 +2,7 @@ package PageObjectModel.Test;
 
 import PageObjectModel.Pages.loginPage;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -17,8 +18,16 @@ import java.io.IOException;
 public class loginTest extends testBase{
 
     Logger logger = LogManager.getLogger("info");
+    public static ExtentReports extent;
+    public static ExtentSparkReporter spark;
 
-
+    @BeforeTest
+    public void report()
+    {
+        extent = new ExtentReports();
+        spark = new ExtentSparkReporter("./Reports/Testcases.html");
+        extent.attachReporter(spark);
+    }
 
     @Test(priority = 1)
     public void testCase1()
@@ -35,12 +44,15 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T1.png"));
+            logger.info("Screenshot for SAUC-T1 test case captured");
             driver.navigate().back();
-            //logger.info("Screenshot for SAUC-T1 test case captured");
+            logger.info("<<<<<Testcase 1 executed>>>>>");
+            extent.createTest("Verify login with valid username and valid password")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User successfully logged in");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        logger.info("<<<<<Testcase 1 executed>>>>>");
     }
 
     @Test(priority = 2)
@@ -59,6 +71,9 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T2.png"));
             logger.info("Screenshot for testcase 2 captured");
+            extent.createTest("Verify login with valid username and invalid password")
+                            .assignAuthor("Thapelo Matji")
+                            .log(Status.PASS, "User was unable to login, correct error message displayed");
             driver.navigate().refresh();
             logger.info("<<<<<Testcase 2 executed>>>>>");
         } catch (Exception e) {
@@ -85,6 +100,9 @@ public class loginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T3.png"));
             driver.navigate().refresh();
             logger.info("<<<<<Testcase 3 executed>>>>>");
+            extent.createTest("Verify login with invalid username and valid password")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was unable to login, correct error message displayed");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -106,6 +124,9 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T4.png"));
             logger.info("<<<<<Test case 4 executed>>>>>");
+            extent.createTest("Verify login with valid username and empty password field")
+                            .assignAuthor("Thapelo Matji")
+                            .log(Status.PASS, "User was unable to login, correct error message displayed");
             driver.navigate().refresh();
         } catch (Exception e) {
             e.printStackTrace();
@@ -114,9 +135,10 @@ public class loginTest extends testBase{
     @Test(priority = 5)
     public void testCase5()
     {
-        //verify login with empty username and valid password
+        //Verify login with empty username and valid password
         try
         {
+            logger.info("<<<<<Executing Testcase 5>>>>>");
             loginPage loginPage = PageFactory.initElements(testBase.driver, loginPage.class);
             loginPage.setUsername("");
             loginPage.setPassword("secret_sauce");
@@ -126,7 +148,12 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T5.png"));
+            logger.info("Screenshot for Testcase captured");
+            logger.info("<<<<<Testcase 5 executed>>>>>");
             driver.navigate().refresh();
+            extent.createTest("Verify login with empty username and valid password")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS,"User was unable to login, correct error message displayed");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -148,6 +175,9 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T6.png"));
             logger.info("<<<<<Testcase 6 executed>>>>>");
+            extent.createTest("verify login with empty username field and empty password")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was unable to login, correct error message displayed");
         } catch (IOException e) {
             e.printStackTrace();
         }
