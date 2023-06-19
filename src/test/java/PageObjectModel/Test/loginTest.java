@@ -181,5 +181,6 @@ public class loginTest extends testBase{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        extent.flush();
     }
 }
