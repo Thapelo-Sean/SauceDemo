@@ -9,11 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class loginPage {
-
     private Logger logger = LogManager.getLogger("Info");
-
     WebDriver driver;
-
     public loginPage(WebDriver driver)
     {
         this.driver = driver;
