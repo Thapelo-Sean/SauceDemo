@@ -1,5 +1,6 @@
 package PageObjectModel.Test;
 
+import PageObjectModel.Pages.inventoryPage;
 import PageObjectModel.Pages.loginPage;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
@@ -27,6 +28,14 @@ public class loginTest extends testBase{
         extent = new ExtentReports();
         spark = new ExtentSparkReporter("./Reports/Testcases.html");
         extent.attachReporter(spark);
+    }
+
+    public void testCase()
+    {
+        loginPage loginPage = PageFactory.initElements(testBase.driver, loginPage.class);
+        loginPage.setUsername("standard_user");
+        loginPage.setPassword("secret_sauce");
+        loginPage.clickLoginButton();
     }
 
     @Test(priority = 1)
@@ -175,6 +184,7 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T6.png"));
             logger.info("<<<<<Testcase 6 executed>>>>>");
+            driver.navigate().refresh();
             extent.createTest("verify login with empty username field and empty password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to login, correct error message displayed");
@@ -182,5 +192,17 @@ public class loginTest extends testBase{
             e.printStackTrace();
         }
         extent.flush();
+    }
+    @Test(priority = 7)
+    public void testcase7()
+    {
+        try
+        {
+            testCase();
+            inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
+            inventorypage.addProductsToCart();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

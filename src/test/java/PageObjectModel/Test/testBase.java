@@ -75,6 +75,7 @@ public class testBase {
     @AfterSuite
     public void closeBrowser()
     {
-        driver.quit();
+        //driver.quit();
+        System.out.println("Executed");
     }
 }
