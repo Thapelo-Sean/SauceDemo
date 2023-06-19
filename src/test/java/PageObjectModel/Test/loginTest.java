@@ -213,7 +213,6 @@ public class loginTest extends testBase{
     {
         try
         {
-            testCase();
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             checkoutPage.setFirstName("Software");
             checkoutPage.setLastName("Tester");
