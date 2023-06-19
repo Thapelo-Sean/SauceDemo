@@ -17,6 +17,8 @@ public class checkoutPage {
     WebElement lastName;
     @FindBy(how = How.ID,using = "postal-code") @CacheLookup
     WebElement postalCode;
+    @FindBy(how = How.ID, using = "continue") @CacheLookup
+    WebElement continueButton;
 
     public void setFirstName(String stringFirstName)
     {
@@ -39,8 +41,17 @@ public class checkoutPage {
 
     public void setpostalCode(String stringPostalCode) {
         try {
-            lastName.sendKeys(stringPostalCode);
+            postalCode.sendKeys(stringPostalCode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void continueButton()
+    {
+        try
+        {
+            continueButton.click();
         } catch (Exception e) {
             e.printStackTrace();
         }

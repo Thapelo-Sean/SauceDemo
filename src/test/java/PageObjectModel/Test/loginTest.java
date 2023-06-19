@@ -1,5 +1,6 @@
 package PageObjectModel.Test;
 
+import PageObjectModel.Pages.checkoutPage;
 import PageObjectModel.Pages.inventoryPage;
 import PageObjectModel.Pages.loginPage;
 import com.aventstack.extentreports.ExtentReports;
@@ -202,6 +203,22 @@ public class loginTest extends testBase{
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(priority = 8)
+    public void testcase8()
+    {
+        try
+        {
+            testCase();
+            checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.setFirstName("Software");
+            checkoutPage.setLastName("Tester");
+            checkoutPage.setpostalCode("12345");
+            checkoutPage.continueButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
