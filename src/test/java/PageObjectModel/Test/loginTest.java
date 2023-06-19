@@ -31,7 +31,7 @@ public class loginTest extends testBase{
         extent.attachReporter(spark);
     }
 
-    public void testCase()
+    public void login()
     {
         loginPage loginPage = PageFactory.initElements(testBase.driver, loginPage.class);
         loginPage.setUsername("standard_user");
@@ -199,7 +199,7 @@ public class loginTest extends testBase{
     {
         try
         {
-            testCase();
+            login();
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
