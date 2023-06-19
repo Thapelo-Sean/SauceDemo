@@ -17,7 +17,7 @@ import java.io.IOException;
 public class loginPage {
 
     private Logger logger = LogManager.getLogger("Info");
-    String baseUrl = "https://www.saucedemo.com/";
+    public String baseUrl = "https://www.saucedemo.com/";
     WebDriver driver;
 
     public loginPage(WebDriver driver)
