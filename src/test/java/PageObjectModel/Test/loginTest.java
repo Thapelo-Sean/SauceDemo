@@ -39,6 +39,7 @@ public class loginTest extends testBase{
         loginPage.clickLoginButton();
     }
 
+    //Verify login with valid username and valid password
     @Test(priority = 1)
     public void testCase1()
     {
@@ -65,10 +66,10 @@ public class loginTest extends testBase{
         }
     }
 
+    //verify login with valid username and invalid password
     @Test(priority = 2)
     public void testCase2()
     {
-        //verify login with valid username and invalid password
         try
         {
             logger.info("<<<<<Executing Testcase 2>>>>>");
@@ -91,10 +92,10 @@ public class loginTest extends testBase{
         }
     }
 
+    //verify login with invalid username and valid password
     @Test(priority = 3)
     public void testCase3()
     {
-        //verify login with invalid username and valid password
         try
         {
             logger.info("<<<<<Executing Testcase 3");
@@ -117,10 +118,11 @@ public class loginTest extends testBase{
             e.printStackTrace();
         }
     }
+
+    //verify login with valid username and empty password field
     @Test(priority = 4)
     public void testCase4()
     {
-        //verify login with valid username and empty password field
         try
         {
             logger.info("<<<<<Executing Testcase 4>>>>>");
@@ -142,10 +144,11 @@ public class loginTest extends testBase{
             e.printStackTrace();
         }
     }
+
+    //Verify login with empty username and valid password
     @Test(priority = 5)
     public void testCase5()
     {
-        //Verify login with empty username and valid password
         try
         {
             logger.info("<<<<<Executing Testcase 5>>>>>");
@@ -168,10 +171,11 @@ public class loginTest extends testBase{
             e.printStackTrace();
         }
     }
+
+    //verify login with empty username field and empty password
     @Test(priority = 6)
     public void testCase6()
     {
-        //verify login with empty username field and empty password
         try
         {
             logger.info("<<<<<Executing Test case 6>>>>>");
@@ -194,6 +198,8 @@ public class loginTest extends testBase{
         }
         extent.flush();
     }
+
+    //Verify user can access cart page after adding products to cart
     @Test(priority = 7)
     public void testcase7()
     {
@@ -208,6 +214,7 @@ public class loginTest extends testBase{
         }
     }
 
+    //Verify checkout information with empty firstname field
     @Test(priority = 8)
     public void testcase8()
     {
