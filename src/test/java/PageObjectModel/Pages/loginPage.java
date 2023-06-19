@@ -1,4 +1,4 @@
-package Pages;
+package PageObjectModel.Pages;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -26,13 +26,16 @@ public class loginPage {
     }
 
     @FindBy(how = How.ID,using = "user-name") @CacheLookup
+    static
     WebElement username;
     @FindBy(how = How.ID,using = "password") @CacheLookup
+    static
     WebElement password;
     @FindBy(how = How.ID, using = "login-button") @CacheLookup
+    static
     WebElement loginButton;
 
-    public void setUsername(String stringUsername)
+    public static void setUsername(String stringUsername)
     {
         try
         {
@@ -43,7 +46,7 @@ public class loginPage {
         }
 
     }
-    public void setPassword(String stringPassword)
+    public static void setPassword(String stringPassword)
     {
         try
         {
@@ -53,7 +56,7 @@ public class loginPage {
             e.printStackTrace();
         }
     }
-    public void clickLoginButton()
+    public static void clickLoginButton()
     {
         try
         {

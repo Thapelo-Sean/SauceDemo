@@ -1,4 +1,4 @@
-package Test;
+package PageObjectModel.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -59,7 +59,7 @@ public class testBase {
         {
             driver.get(baseUrl);
             driver.manage().window().maximize();
-            driver.manage().deleteAllCookies();
+            //driver.manage().deleteAllCookies();
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
             //Verify URL
