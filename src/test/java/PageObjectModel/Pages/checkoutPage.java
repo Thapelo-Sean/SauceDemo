@@ -32,21 +32,26 @@ public class checkoutPage {
         try
         {
             firstName.sendKeys(stringFirstName);
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
-    public void setLastName(String stringLastName) {
+    public void setLastName(String stringLastName)
+    {
         try
         {
             lastName.sendKeys(stringLastName);
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
 
-    public void setPostalCode(String stringPostalCode) {
-        try {
+    public void setPostalCode(String stringPostalCode)
+    {
+        try
+        {
             postalCode.sendKeys(stringPostalCode);
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,7 +63,8 @@ public class checkoutPage {
         try
         {
             continueButton.click();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -68,7 +74,8 @@ public class checkoutPage {
         try
         {
             finishButton.click();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
