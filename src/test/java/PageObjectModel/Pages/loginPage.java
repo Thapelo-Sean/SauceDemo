@@ -26,7 +26,8 @@ public class loginPage {
         {
             username.clear();
             username.sendKeys(stringUsername);
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -36,7 +37,8 @@ public class loginPage {
         {
             password.clear();
             password.sendKeys(stringPassword);
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -45,7 +47,8 @@ public class loginPage {
         try
         {
             loginButton.click();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
