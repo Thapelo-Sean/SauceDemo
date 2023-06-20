@@ -19,10 +19,8 @@ public class inventoryPage {
     WebElement addTocartBackPackButton;
     @FindBy(how = How.ID, using = "add-to-cart-sauce-labs-bike-light") @CacheLookup
     WebElement getAddTocartBikeLightButton;
-    @FindBy(how = How.ID, using = "shopping_cart_container") @CacheLookup
+    @FindBy(how = How.CLASS_NAME,using = "shopping_cart_container") @CacheLookup
     WebElement shoppingCardContainer;
-    @FindBy(how = How.ID, using = "checkout") @CacheLookup
-    WebElement checkoutButton;
     @FindBy(how = How.ID, using = "continue-shopping") @CacheLookup
     WebElement continueShopping;
 
@@ -41,13 +39,12 @@ public class inventoryPage {
         try
         {
             shoppingCardContainer.click();
-            checkoutButton.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void continueShopping()
+/*    public void continueShopping()
     {
         try
         {
@@ -55,5 +52,5 @@ public class inventoryPage {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

@@ -59,8 +59,8 @@ public class testBase {
         {
             driver.get(baseUrl);
             driver.manage().window().maximize();
-            //driver.manage().deleteAllCookies();
-            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+            driver.manage().deleteAllCookies();
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
             //Verify URL
             String actualUrl = driver.getCurrentUrl();

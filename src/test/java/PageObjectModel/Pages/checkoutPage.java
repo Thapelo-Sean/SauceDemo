@@ -19,8 +19,8 @@ public class checkoutPage {
     WebElement continueButton;
     @FindBy(how = How.ID, using = "finish") @CacheLookup
     WebElement finishButton;
-    @FindBy(how = How.ID, using = "checkout") @CacheLookup
-    WebElement checkoutButton;
+/*    @FindBy(how = How.LINK_TEXT, using = "Checkout") @CacheLookup
+    WebElement checkoutButton;*/
     @FindBy(how = How.ID, using = "cancel") @CacheLookup
     WebElement cancelButton;
     public void setFirstName(String stringFirstName)
@@ -78,7 +78,7 @@ public class checkoutPage {
             e.printStackTrace();
         }
     }
-    public void checkoutButton()
+/*    public void checkoutButton()
     {
         try
         {
@@ -86,5 +86,5 @@ public class checkoutPage {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

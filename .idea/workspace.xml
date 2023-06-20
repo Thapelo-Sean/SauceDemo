@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed55588-21cd-407d-804a-9d361b7012e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Testcases.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/testBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/testBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,5 +110,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

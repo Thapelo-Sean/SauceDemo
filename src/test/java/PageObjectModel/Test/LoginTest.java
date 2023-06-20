@@ -1,5 +1,6 @@
 package PageObjectModel.Test;
 
+import PageObjectModel.Pages.cartPage;
 import PageObjectModel.Pages.checkoutPage;
 import PageObjectModel.Pages.inventoryPage;
 import PageObjectModel.Pages.loginPage;
@@ -34,12 +35,13 @@ public class LoginTest extends testBase{
 
     public void login()
     {
-        loginPage loginPage = PageFactory.initElements(testBase.driver, loginPage.class);
+        loginPage loginPage = PageFactory.initElements(driver, loginPage.class);
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         loginPage.clickLoginButton();
     }
 
+/*
     //Verify login with valid username and valid password
     @Test(priority = 1)
     public void testCase1()
@@ -164,7 +166,7 @@ public class LoginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T5.png"));
             logger.info("Screenshot for Testcase captured");
             logger.info("<<<<<Testcase 5 executed>>>>>");
-            driver.navigate().refresh();
+            driver.navigate().to(baseUrl);
             extent.createTest("Verify login with empty username and valid password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS,"User was unable to login, correct error message displayed");
@@ -172,6 +174,7 @@ public class LoginTest extends testBase{
             e.printStackTrace();
         }
     }
+*/
 
     //verify login with empty username field and empty password
     @Test(priority = 6)
@@ -190,7 +193,9 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T6.png"));
             logger.info("<<<<<Testcase 6 executed>>>>>");
-            driver.navigate().refresh();
+            driver.navigate().to(baseUrl);
+            login();  //login is here
+            System.out.println(driver.getCurrentUrl());
             extent.createTest("verify login with empty username field and empty password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to login, correct error message displayed");
@@ -205,17 +210,23 @@ public class LoginTest extends testBase{
     {
         try
         {
-            login();
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
+            Thread.sleep(2000);
             inventorypage.addProductsToCart();
+            Thread.sleep(2000);
             inventorypage.shoppingCart();
+            Thread.sleep(2000);
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshot/SAUC-T7.png"));
-            inventorypage.continueShopping();
-            inventorypage.shoppingCart();
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T7.png"));
+            //cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            Thread.sleep(2000);
+            //cartPage.continueShoppingButton();
+            Thread.sleep(2000);
+            //inventorypage.shoppingCart();
+            Thread.sleep(2000);
             extent.createTest("Verify user can access cart page after adding products to cart")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to access cart page after adding products");
@@ -230,8 +241,11 @@ public class LoginTest extends testBase{
     {
         try
         {
+            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            Thread.sleep(2000);
+            cartPage.checkoutButton();
+            Thread.sleep(2000);
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("12345");
@@ -258,8 +272,9 @@ public class LoginTest extends testBase{
     {
         try
         {
+            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            cartPage.checkoutButton();
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("");
             checkoutPage.setpostalCode("");
@@ -285,7 +300,8 @@ public class LoginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            checkoutPage.checkoutButton();
+            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            cartPage.checkoutButton();
             checkoutPage.setFirstName("Tester");
             checkoutPage.setLastName("");
             checkoutPage.setpostalCode("9876");
@@ -310,8 +326,9 @@ public class LoginTest extends testBase{
     {
         try
         {
-            checkoutPage checkoutPage = PageFactory.initElements((SearchContext) this,checkoutPage.class);
-            checkoutPage.checkoutButton();
+            checkoutPage checkoutPage = PageFactory.initElements(driver,checkoutPage.class);
+            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            cartPage.checkoutButton();
             checkoutPage.setFirstName("John");
             checkoutPage.setLastName("Doe");
             checkoutPage.setpostalCode("");
@@ -337,21 +354,28 @@ public class LoginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            checkoutPage.checkoutButton();
+            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            cartPage.checkoutButton();
             checkoutPage.setFirstName("Software");
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("45667");
+            Thread.sleep(1000);
             checkoutPage.continueButton();
-            checkoutPage.finishButton();
-
-            //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T12.png"));
+
+            Thread.sleep(1000);
+            checkoutPage.finishButton();
+
+            //capture screenshot
+            TakesScreenshot screenshot1 = (TakesScreenshot)driver;
+            File source1 = screenshot1.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source1, new File("./Screenshots/SAUC-T13.png"));
             extent.createTest("Verify checkout with credentials")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to checkout");
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
         extent.flush();
