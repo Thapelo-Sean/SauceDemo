@@ -15,17 +15,9 @@ public class cartPage {
 
     @FindBy(how = How.ID, using = "checkout") @CacheLookup
     WebElement checkoutButton;
-    @FindBy(how = How.ID, using = "continue-shopping") @CacheLookup
-    WebElement continueShoppingButton;
 
     public void checkoutButton()
     {
         checkoutButton.click();
     }
-
-    public void continueShoppingButton()
-    {
-        continueShoppingButton.click();
-    }
-
 }
