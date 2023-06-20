@@ -70,7 +70,7 @@ public class checkoutPage {
         }
     }
 
-    public void setCancelButton()
+    public void cancelButton()
     {
         try
         {

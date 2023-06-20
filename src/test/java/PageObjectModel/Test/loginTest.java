@@ -233,6 +233,7 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T8.png"));
+            checkoutPage.cancelButton();
             //checkoutPage.finishButton();
             //Thread.sleep(2000);
         } catch (Exception e) {
