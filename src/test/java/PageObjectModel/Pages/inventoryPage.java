@@ -16,9 +16,9 @@ public class inventoryPage {
 
     //Locate elements
     @FindBy(how = How.ID, using = "add-to-cart-sauce-labs-backpack") @CacheLookup
-    WebElement addTocartBackPackButton;
+    WebElement addToCartBackPackButton;
     @FindBy(how = How.ID, using = "add-to-cart-sauce-labs-bike-light") @CacheLookup
-    WebElement getAddTocartBikeLightButton;
+    WebElement addToCartBikeLightButton;
     @FindBy(how = How.CLASS_NAME,using = "shopping_cart_container") @CacheLookup
     WebElement shoppingCardContainer;
 
@@ -26,8 +26,8 @@ public class inventoryPage {
     {
         try
         {
-            addTocartBackPackButton.click();
-            getAddTocartBikeLightButton.click();
+            addToCartBackPackButton.click();
+            addToCartBikeLightButton.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
