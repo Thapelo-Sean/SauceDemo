@@ -28,7 +28,8 @@ public class inventoryPage {
         {
             addToCartBackPackButton.click();
             addToCartBikeLightButton.click();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -37,7 +38,8 @@ public class inventoryPage {
         try
         {
             shoppingCardContainer.click();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
