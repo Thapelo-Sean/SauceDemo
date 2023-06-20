@@ -26,6 +26,7 @@ public class checkoutPage {
     WebElement finishButton;
     @FindBy(how = How.ID, using = "cancel") @CacheLookup
     WebElement cancelButton;
+
     public void setFirstName(String stringFirstName)
     {
         try
