@@ -197,7 +197,6 @@ public class loginTest extends testBase{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        extent.flush();
     }
 
     //Verify user can access cart page after adding products to cart
@@ -217,6 +216,9 @@ public class loginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshot/SAUC-T7.png"));
             inventorypage.continueShopping();
             inventorypage.shoppingCart();
+            extent.createTest("Verify user can access cart page after adding products to cart")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was able to access cart page after adding products");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -229,7 +231,7 @@ public class loginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-           // inventoryPage inventoryPage = PageFactory.initElements(driver, inventoryPage.class);
+            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("12345");
@@ -242,9 +244,9 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T8.png"));
             checkoutPage.cancelButton();
-            //
-            //checkoutPage.finishButton();
-            //Thread.sleep(2000);
+            extent.createTest("Verify checkout with empty firstname text field")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was unable to checkout, correct error message displayed");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -257,6 +259,7 @@ public class loginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("");
             checkoutPage.setpostalCode("");
@@ -267,18 +270,22 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T9.png"));
             checkoutPage.cancelButton();
+            extent.createTest("Verify checkout with empty text fields")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was unable to checkout, correct error meesage displayed");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    //Verify checkout with empty lastname field
+    //Verify checkout with empty lastname text field
     @Test(priority = 10)
     public void testCase10()
     {
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("Tester");
             checkoutPage.setLastName("");
             checkoutPage.setpostalCode("9876");
@@ -289,6 +296,9 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T10.png"));
             checkoutPage.cancelButton();
+            extent.createTest("Verify checkput with empty lastname text field")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was unable to checkout, correct error message displayed");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -301,6 +311,7 @@ public class loginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements((SearchContext) this,checkoutPage.class);
+            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("John");
             checkoutPage.setLastName("Doe");
             checkoutPage.setpostalCode("");
@@ -311,6 +322,9 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11.png"));
             checkoutPage.cancelButton();
+            extent.createTest("Verify checkout with empty postal code text field")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was unable to checkout, correct error message displayed");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -323,6 +337,7 @@ public class loginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.checkoutButton();
             checkoutPage.setFirstName("Software");
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("45667");
@@ -333,8 +348,12 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T12.png"));
+            extent.createTest("Verify checkout with credentials")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User was able to checkout");
         } catch (IOException e) {
             e.printStackTrace();
         }
+        extent.flush();
     }
 }
