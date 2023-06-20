@@ -18,7 +18,8 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class LoginTest extends testBase{
+public class LoginTest extends testBase
+{
 
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
