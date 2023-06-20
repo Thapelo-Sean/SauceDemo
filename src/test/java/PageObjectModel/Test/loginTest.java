@@ -210,6 +210,11 @@ public class loginTest extends testBase{
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
+
+            //capture screenshot
+            TakesScreenshot screenshot = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshot/SAUC-T7.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -257,6 +262,7 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T9.png"));
+            checkoutPage.cancelButton();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -278,6 +284,7 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T10.png"));
+            checkoutPage.cancelButton();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -299,6 +306,7 @@ public class loginTest extends testBase{
             TakesScreenshot screenshot  = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11.png"));
+            checkoutPage.cancelButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -315,6 +323,7 @@ public class loginTest extends testBase{
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("45667");
             checkoutPage.continueButton();
+            checkoutPage.finishButton();
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
