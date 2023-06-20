@@ -36,9 +36,9 @@ public class checkoutPage {
         }
     }
     public void setLastName(String stringLastName) {
-        try {
+        try
+        {
             lastName.sendKeys(stringLastName);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
