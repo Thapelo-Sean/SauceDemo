@@ -27,7 +27,7 @@ public class LoginTest extends testBase{
     public void report()
     {
         extent = new ExtentReports();
-        spark = new ExtentSparkReporter("./Reports/Testcases.html");
+        spark = new ExtentSparkReporter("./Reports/TestCasesReport.html");
         extent.attachReporter(spark);
     }
 
