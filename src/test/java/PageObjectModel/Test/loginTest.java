@@ -210,6 +210,7 @@ public class loginTest extends testBase{
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
+            inventorypage.
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;

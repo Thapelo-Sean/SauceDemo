@@ -23,6 +23,8 @@ public class inventoryPage {
     WebElement shoppingCardContainer;
     @FindBy(how = How.ID, using = "checkout") @CacheLookup
     WebElement checkoutButton;
+    @FindBy(how = How.ID, using = "continue-shopping") @CacheLookup
+    WebElement continueShopping;
 
     public void addProductsToCart()
     {
@@ -40,6 +42,16 @@ public class inventoryPage {
         {
             shoppingCardContainer.click();
             checkoutButton.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void continueShopping()
+    {
+        try
+        {
+            continueShopping.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
