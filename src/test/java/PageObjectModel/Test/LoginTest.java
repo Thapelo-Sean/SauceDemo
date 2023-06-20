@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class loginTest extends testBase{
+public class LoginTest extends testBase{
 
     Logger logger = LogManager.getLogger("info");
     public static ExtentReports extent;
@@ -272,7 +272,7 @@ public class loginTest extends testBase{
             checkoutPage.cancelButton();
             extent.createTest("Verify checkout with empty text fields")
                     .assignAuthor("Thapelo Matji")
-                    .log(Status.PASS, "User was unable to checkout, correct error meesage displayed");
+                    .log(Status.PASS, "User was unable to checkout, correct error message displayed");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -296,7 +296,7 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T10.png"));
             checkoutPage.cancelButton();
-            extent.createTest("Verify checkput with empty lastname text field")
+            extent.createTest("Verify checkout with empty lastname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
         } catch (IOException e) {
