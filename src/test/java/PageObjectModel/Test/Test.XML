@@ -5,7 +5,7 @@
         <parameter name ="browser" value="chrome"/>
         <classes>
             <class name = "PageObjectModel.Test.testBase"/>
-            <class name = "PageObjectModel.Test.loginTest"/>
+            <class name = "PageObjectModel.Test.LoginTest"/>
         </classes>
     </test>
 </suite>
