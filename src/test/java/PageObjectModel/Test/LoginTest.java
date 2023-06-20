@@ -19,7 +19,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class LoginTest extends testBase{
-
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
     public static ExtentSparkReporter spark;
@@ -39,7 +38,6 @@ public class LoginTest extends testBase{
         loginPage.setPassword("secret_sauce");
         loginPage.clickLoginButton();
     }
-
 
     //Verify login with valid username and valid password
     @Test(priority = 1)
@@ -174,7 +172,6 @@ public class LoginTest extends testBase{
         }
     }
 
-
     //verify login with empty username field and empty password
     @Test(priority = 6)
     public void testCase6()
@@ -209,6 +206,7 @@ public class LoginTest extends testBase{
     {
         try
         {
+            logger.info("<<<<<Executing Test case 7>>>>>");
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
@@ -217,6 +215,7 @@ public class LoginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T7.png"));
+            logger.info("<<<<<Testcase 7 executed>>>>>");
             extent.createTest("Verify user can access cart page after adding products to cart")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to access cart page after adding products");
@@ -231,6 +230,7 @@ public class LoginTest extends testBase{
     {
         try
         {
+            logger.info("<<<<<Executing Test case 8>>>>>");
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             cartPage.checkoutButton();
@@ -244,6 +244,7 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T8.png"));
             checkoutPage.cancelButton();
+            logger.info("<<<<<Testcase 8 executed>>>>>");
             extent.createTest("Verify checkout with empty firstname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -258,6 +259,7 @@ public class LoginTest extends testBase{
     {
         try
         {
+            logger.info("<<<<<Executing Test case 9>>>>>");
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             cartPage.checkoutButton();
@@ -271,6 +273,7 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T9.png"));
             checkoutPage.cancelButton();
+            logger.info("<<<<<Testcase 9 executed>>>>>");
             extent.createTest("Verify checkout with empty text fields")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -285,6 +288,7 @@ public class LoginTest extends testBase{
     {
         try
         {
+            logger.info("<<<<<Executing Test case 10>>>>>");
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
             cartPage.checkoutButton();
@@ -298,6 +302,7 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T10.png"));
             checkoutPage.cancelButton();
+            logger.info("<<<<<Testcase 10 executed>>>>>");
             extent.createTest("Verify checkout with empty lastname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -312,6 +317,7 @@ public class LoginTest extends testBase{
     {
         try
         {
+            logger.info("<<<<<Executing Test case 11>>>>>");
             checkoutPage checkoutPage = PageFactory.initElements(driver,checkoutPage.class);
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
             cartPage.checkoutButton();
@@ -325,6 +331,7 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11.png"));
             checkoutPage.cancelButton();
+            logger.info("<<<<<Testcase 11 executed>>>>>");
             extent.createTest("Verify checkout with empty postal code text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -335,9 +342,11 @@ public class LoginTest extends testBase{
 
     //Verify checkout
     @Test(priority = 12)
-    public void testCase12() throws IOException {
+    public void testCase12()
+    {
         try
         {
+            logger.info("<<<<<Executing Test case 12>>>>>");
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
             cartPage.checkoutButton();
@@ -354,6 +363,7 @@ public class LoginTest extends testBase{
             TakesScreenshot screenshot1 = (TakesScreenshot)driver;
             File source1 = screenshot1.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source1, new File("./Screenshots/SAUC-T13.png"));
+            logger.info("<<<<<Testcase 12 executed>>>>>");
             extent.createTest("Verify checkout with credentials")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to checkout");
