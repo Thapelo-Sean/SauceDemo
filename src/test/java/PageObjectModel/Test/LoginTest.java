@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class LoginTest extends testBase
+public class LoginTest extends TestBase
 {
 
     private final Logger logger = LogManager.getLogger("Info");
@@ -48,7 +48,7 @@ public class LoginTest extends testBase
         try
         {
             logger.info("<<<<<Executing Testcase 1>>>>>");
-            LoginPage loginPage = PageFactory.initElements(testBase.driver, LoginPage.class);
+            LoginPage loginPage = PageFactory.initElements(TestBase.driver, LoginPage.class);
             loginPage.setUsername("standard_user");
             loginPage.setPassword("secret_sauce");
             loginPage.clickLoginButton();
@@ -78,7 +78,7 @@ public class LoginTest extends testBase
         try
         {
             logger.info("<<<<<Executing Testcase 2>>>>>");
-            LoginPage loginPage = PageFactory.initElements(testBase.driver, LoginPage.class);
+            LoginPage loginPage = PageFactory.initElements(TestBase.driver, LoginPage.class);
             loginPage.setUsername("standard_user");
             loginPage.setPassword("Invalid_Password");
             loginPage.clickLoginButton();
@@ -107,7 +107,7 @@ public class LoginTest extends testBase
         try
         {
             logger.info("<<<<<Executing Testcase 3");
-            LoginPage loginPage = PageFactory.initElements(testBase.driver, LoginPage.class);
+            LoginPage loginPage = PageFactory.initElements(TestBase.driver, LoginPage.class);
             driver.get(baseUrl);
             loginPage.setUsername("invalid_username");
             loginPage.setPassword("secret_sauce");
@@ -137,7 +137,7 @@ public class LoginTest extends testBase
         try
         {
             logger.info("<<<<<Executing Testcase 4>>>>>");
-            LoginPage loginPage = PageFactory.initElements(testBase.driver, LoginPage.class);
+            LoginPage loginPage = PageFactory.initElements(TestBase.driver, LoginPage.class);
             loginPage.setUsername("standard_user");
             loginPage.setPassword("");
             loginPage.clickLoginButton();
@@ -166,7 +166,7 @@ public class LoginTest extends testBase
         try
         {
             logger.info("<<<<<Executing Testcase 5>>>>>");
-            LoginPage loginPage = PageFactory.initElements(testBase.driver, LoginPage.class);
+            LoginPage loginPage = PageFactory.initElements(TestBase.driver, LoginPage.class);
             loginPage.setUsername("");
             loginPage.setPassword("secret_sauce");
             loginPage.clickLoginButton();
@@ -195,7 +195,7 @@ public class LoginTest extends testBase
         try
         {
             logger.info("<<<<<Executing Test case 6>>>>>");
-            LoginPage loginPage = PageFactory.initElements(testBase.driver, LoginPage.class);
+            LoginPage loginPage = PageFactory.initElements(TestBase.driver, LoginPage.class);
             loginPage.setUsername("");
             loginPage.setPassword("");
             loginPage.clickLoginButton();

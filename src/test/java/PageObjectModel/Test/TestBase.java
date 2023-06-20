@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import java.util.concurrent.TimeUnit;
 
-public class testBase {
+public class TestBase {
 
     static WebDriver driver = null;
     public String baseUrl = "https://www.saucedemo.com/";
