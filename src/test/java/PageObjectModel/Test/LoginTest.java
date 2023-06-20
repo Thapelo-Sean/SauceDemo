@@ -408,7 +408,7 @@ public class LoginTest extends testBase{
     }
 
     //verify logout functionality
-    @Test
+    @Test(priority = 13)
     public void testCase13()
     {
         try
@@ -416,18 +416,20 @@ public class LoginTest extends testBase{
             logger.info("<<<<<Executing Test case 12>>>>>");
             inventoryPage inventoryPage = PageFactory.initElements(driver, inventoryPage.class);
             inventoryPage.menuButton();
+            Thread.sleep(300);
             inventoryPage.logoutButton();
+            Thread.sleep(300);
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T13.png"));
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T14.png"));
             logger.info("<<<<<Testcase 12 executed>>>>>");
 
             //Testcase Report
             extent.createTest("Verify logout functionality")
                     .assignAuthor("Thapelo Matji")
-                    .log(Status.PASS, "User is able to logout");
+                    .log(Status.PASS, "User logged out successfully");
         } catch (Exception e)
         {
             e.printStackTrace();
