@@ -203,9 +203,8 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T6.png"));
             logger.info("<<<<<Testcase 6 executed>>>>>");
-            driver.navigate().to(baseUrl);
-            login();  //login is here
-            System.out.println(driver.getCurrentUrl());
+
+            //Testcase Report
             extent.createTest("verify login with empty username field and empty password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to login, correct error message displayed");
@@ -222,6 +221,8 @@ public class LoginTest extends testBase{
         try
         {
             logger.info("<<<<<Executing Test case 7>>>>>");
+            driver.navigate().to(baseUrl);
+            login();
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
@@ -231,6 +232,8 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T7.png"));
             logger.info("<<<<<Testcase 7 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify user can access cart page after adding products to cart")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to access cart page after adding products");
@@ -261,6 +264,8 @@ public class LoginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T8.png"));
             checkoutPage.cancelButton();
             logger.info("<<<<<Testcase 8 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify checkout with empty firstname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -291,6 +296,8 @@ public class LoginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T9.png"));
             checkoutPage.cancelButton();
             logger.info("<<<<<Testcase 9 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify checkout with empty text fields")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -321,6 +328,8 @@ public class LoginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T10.png"));
             checkoutPage.cancelButton();
             logger.info("<<<<<Testcase 10 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify checkout with empty lastname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -351,6 +360,8 @@ public class LoginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11.png"));
             checkoutPage.cancelButton();
             logger.info("<<<<<Testcase 11 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify checkout with empty postal code text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
@@ -384,6 +395,8 @@ public class LoginTest extends testBase{
             File source1 = screenshot1.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source1, new File("./Screenshots/SAUC-T13.png"));
             logger.info("<<<<<Testcase 12 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify checkout with credentials")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to checkout");
@@ -392,5 +405,32 @@ public class LoginTest extends testBase{
             e.printStackTrace();
         }
         extent.flush();
+    }
+
+    //verify logout functionality
+    @Test
+    public void testCase13()
+    {
+        try
+        {
+            logger.info("<<<<<Executing Test case 12>>>>>");
+            inventoryPage inventoryPage = PageFactory.initElements(driver, inventoryPage.class);
+            inventoryPage.menuButton();
+            inventoryPage.logoutButton();
+
+            //capture screenshot
+            TakesScreenshot screenshot = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T13.png"));
+            logger.info("<<<<<Testcase 12 executed>>>>>");
+
+            //Testcase Report
+            extent.createTest("Verify logout functionality")
+                    .assignAuthor("Thapelo Matji")
+                    .log(Status.PASS, "User is able to logout");
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }
