@@ -12,6 +12,7 @@ public class checkoutPage {
     {
         this.driver = driver;
     }
+
     //locate elements
     @FindBy(how = How.ID, using = "first-name") @CacheLookup
     WebElement firstName;
@@ -23,7 +24,6 @@ public class checkoutPage {
     WebElement continueButton;
     @FindBy(how = How.ID, using = "finish") @CacheLookup
     WebElement finishButton;
-
     @FindBy(how = How.ID, using = "cancel") @CacheLookup
     WebElement cancelButton;
     public void setFirstName(String stringFirstName)

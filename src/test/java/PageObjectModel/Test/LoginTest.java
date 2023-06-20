@@ -1,6 +1,6 @@
 package PageObjectModel.Test;
 
-import PageObjectModel.Pages.cartPage;
+import PageObjectModel.Pages.CartPage;
 import PageObjectModel.Pages.checkoutPage;
 import PageObjectModel.Pages.inventoryPage;
 import PageObjectModel.Pages.loginPage;
@@ -231,7 +231,7 @@ public class LoginTest extends testBase{
         try
         {
             logger.info("<<<<<Executing Test case 8>>>>>");
-            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             cartPage.checkoutButton();
             checkoutPage.setFirstName("");
@@ -260,7 +260,7 @@ public class LoginTest extends testBase{
         try
         {
             logger.info("<<<<<Executing Test case 9>>>>>");
-            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
             cartPage.checkoutButton();
             checkoutPage.setFirstName("");
@@ -290,7 +290,7 @@ public class LoginTest extends testBase{
         {
             logger.info("<<<<<Executing Test case 10>>>>>");
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             cartPage.checkoutButton();
             checkoutPage.setFirstName("Tester");
             checkoutPage.setLastName("");
@@ -319,7 +319,7 @@ public class LoginTest extends testBase{
         {
             logger.info("<<<<<Executing Test case 11>>>>>");
             checkoutPage checkoutPage = PageFactory.initElements(driver,checkoutPage.class);
-            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             cartPage.checkoutButton();
             checkoutPage.setFirstName("John");
             checkoutPage.setLastName("Doe");
@@ -348,7 +348,7 @@ public class LoginTest extends testBase{
         {
             logger.info("<<<<<Executing Test case 12>>>>>");
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
+            CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             cartPage.checkoutButton();
             checkoutPage.setFirstName("Software");
             checkoutPage.setLastName("Tester");
