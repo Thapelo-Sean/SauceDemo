@@ -240,6 +240,27 @@ public class loginTest extends testBase{
         }
     }
 
+    //verify checkout with empty fields
+    @Test(priority = 9)
+    public void testCase9()
+    {
+        try
+        {
+            checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.setFirstName("");
+            checkoutPage.setLastName("");
+            checkoutPage.setpostalCode("");
+            checkoutPage.continueButton();
+
+            //capture screenshot
+            TakesScreenshot screenshot = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T9.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     //Verify checkout with empty lastname field
     @Test(priority = 10)
     public void testCase10()
@@ -276,9 +297,29 @@ public class loginTest extends testBase{
             //Capture screenshot
             TakesScreenshot screenshot  = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11"));
-
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11.png"));
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Verify checkout
+    @Test(priority = 12)
+    public void testCase12()
+    {
+        try
+        {
+            checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.setFirstName("Software");
+            checkoutPage.setLastName("Tester");
+            checkoutPage.setpostalCode("45667");
+            checkoutPage.continueButton();
+
+            //capture screenshot
+            TakesScreenshot screenshot = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T12.png"));
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
