@@ -211,22 +211,13 @@ public class LoginTest extends testBase{
         try
         {
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
-            Thread.sleep(2000);
             inventorypage.addProductsToCart();
-            Thread.sleep(2000);
             inventorypage.shoppingCart();
-            Thread.sleep(2000);
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T7.png"));
-            //cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
-            Thread.sleep(2000);
-            //cartPage.continueShoppingButton();
-            Thread.sleep(2000);
-            //inventorypage.shoppingCart();
-            Thread.sleep(2000);
             extent.createTest("Verify user can access cart page after adding products to cart")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to access cart page after adding products");
@@ -242,16 +233,12 @@ public class LoginTest extends testBase{
         try
         {
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
-            Thread.sleep(2000);
-            cartPage.checkoutButton();
-            Thread.sleep(2000);
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            cartPage.checkoutButton();
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("Tester");
-            checkoutPage.setpostalCode("12345");
-            Thread.sleep(2000);
+            checkoutPage.setPostalCode("12345");
             checkoutPage.continueButton();
-            Thread.sleep(2000);
 
             //Capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
@@ -273,11 +260,11 @@ public class LoginTest extends testBase{
         try
         {
             cartPage cartPage = PageFactory.initElements(driver, cartPage.class);
-            cartPage.checkoutButton();
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            cartPage.checkoutButton();
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("");
-            checkoutPage.setpostalCode("");
+            checkoutPage.setPostalCode("");
             checkoutPage.continueButton();
 
             //capture screenshot
@@ -304,7 +291,7 @@ public class LoginTest extends testBase{
             cartPage.checkoutButton();
             checkoutPage.setFirstName("Tester");
             checkoutPage.setLastName("");
-            checkoutPage.setpostalCode("9876");
+            checkoutPage.setPostalCode("9876");
             checkoutPage.continueButton();
 
             //capture screenshot
@@ -331,7 +318,7 @@ public class LoginTest extends testBase{
             cartPage.checkoutButton();
             checkoutPage.setFirstName("John");
             checkoutPage.setLastName("Doe");
-            checkoutPage.setpostalCode("");
+            checkoutPage.setPostalCode("");
             checkoutPage.continueButton();
 
             //Capture screenshot
@@ -349,8 +336,7 @@ public class LoginTest extends testBase{
 
     //Verify checkout
     @Test(priority = 12)
-    public void testCase12()
-    {
+    public void testCase12() throws IOException {
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
@@ -358,14 +344,11 @@ public class LoginTest extends testBase{
             cartPage.checkoutButton();
             checkoutPage.setFirstName("Software");
             checkoutPage.setLastName("Tester");
-            checkoutPage.setpostalCode("45667");
-            Thread.sleep(1000);
+            checkoutPage.setPostalCode("45667");
             checkoutPage.continueButton();
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T12.png"));
-
-            Thread.sleep(1000);
             checkoutPage.finishButton();
 
             //capture screenshot
@@ -375,7 +358,7 @@ public class LoginTest extends testBase{
             extent.createTest("Verify checkout with credentials")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to checkout");
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         extent.flush();
