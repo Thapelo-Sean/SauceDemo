@@ -55,13 +55,16 @@ public class LoginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T1.png"));
-            logger.info("Screenshot for SAUC-T1 test case captured");
+
             driver.navigate().back();
             logger.info("<<<<<Testcase 1 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify login with valid username and valid password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User successfully logged in");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -78,16 +81,19 @@ public class LoginTest extends testBase{
             loginPage.setPassword("Invalid_Password");
             loginPage.clickLoginButton();
 
+            //Capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T2.png"));
-            logger.info("Screenshot for testcase 2 captured");
+
+            //Testcase Report
             extent.createTest("Verify login with valid username and invalid password")
                             .assignAuthor("Thapelo Matji")
                             .log(Status.PASS, "User was unable to login, correct error message displayed");
             driver.navigate().refresh();
             logger.info("<<<<<Testcase 2 executed>>>>>");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -111,10 +117,13 @@ public class LoginTest extends testBase{
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T3.png"));
             driver.navigate().refresh();
             logger.info("<<<<<Testcase 3 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify login with invalid username and valid password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to login, correct error message displayed");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -136,11 +145,14 @@ public class LoginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T4.png"));
             logger.info("<<<<<Test case 4 executed>>>>>");
+
+            //Testcase Report
             extent.createTest("Verify login with valid username and empty password field")
                             .assignAuthor("Thapelo Matji")
                             .log(Status.PASS, "User was unable to login, correct error message displayed");
             driver.navigate().refresh();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -161,13 +173,15 @@ public class LoginTest extends testBase{
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T5.png"));
-            logger.info("Screenshot for Testcase captured");
             logger.info("<<<<<Testcase 5 executed>>>>>");
             driver.navigate().to(baseUrl);
+
+            //Testcase Report
             extent.createTest("Verify login with empty username and valid password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS,"User was unable to login, correct error message displayed");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -195,7 +209,8 @@ public class LoginTest extends testBase{
             extent.createTest("verify login with empty username field and empty password")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to login, correct error message displayed");
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
@@ -219,7 +234,8 @@ public class LoginTest extends testBase{
             extent.createTest("Verify user can access cart page after adding products to cart")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to access cart page after adding products");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -248,7 +264,8 @@ public class LoginTest extends testBase{
             extent.createTest("Verify checkout with empty firstname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -277,7 +294,8 @@ public class LoginTest extends testBase{
             extent.createTest("Verify checkout with empty text fields")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
@@ -306,7 +324,8 @@ public class LoginTest extends testBase{
             extent.createTest("Verify checkout with empty lastname text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
@@ -335,7 +354,8 @@ public class LoginTest extends testBase{
             extent.createTest("Verify checkout with empty postal code text field")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was unable to checkout, correct error message displayed");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -367,7 +387,8 @@ public class LoginTest extends testBase{
             extent.createTest("Verify checkout with credentials")
                     .assignAuthor("Thapelo Matji")
                     .log(Status.PASS, "User was able to checkout");
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
         extent.flush();

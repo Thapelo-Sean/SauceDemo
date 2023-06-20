@@ -21,6 +21,10 @@ public class inventoryPage {
     WebElement addToCartBikeLightButton;
     @FindBy(how = How.CLASS_NAME,using = "shopping_cart_container") @CacheLookup
     WebElement shoppingCardContainer;
+    @FindBy(how = How.ID, using = "react-burger-menu-btn") @CacheLookup
+    WebElement menuButton;
+    @FindBy(how = How.ID, using = "logout_sidebar_link") @CacheLookup
+    WebElement logoutButton;
 
     public void addProductsToCart()
     {
@@ -42,5 +46,15 @@ public class inventoryPage {
         {
             e.printStackTrace();
         }
+    }
+
+    public void menuButton()
+    {
+        menuButton.click();
+    }
+
+    public void logoutButton()
+    {
+        logoutButton.click();
     }
 }
