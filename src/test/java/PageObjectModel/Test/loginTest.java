@@ -210,12 +210,13 @@ public class loginTest extends testBase{
             inventoryPage inventorypage = PageFactory.initElements(driver,inventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
-            inventorypage.
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshot/SAUC-T7.png"));
+            inventorypage.continueShopping();
+            inventorypage.shoppingCart();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -228,6 +229,7 @@ public class loginTest extends testBase{
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+           // inventoryPage inventoryPage = PageFactory.initElements(driver, inventoryPage.class);
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("12345");
@@ -240,6 +242,7 @@ public class loginTest extends testBase{
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T8.png"));
             checkoutPage.cancelButton();
+            //
             //checkoutPage.finishButton();
             //Thread.sleep(2000);
         } catch (Exception e) {

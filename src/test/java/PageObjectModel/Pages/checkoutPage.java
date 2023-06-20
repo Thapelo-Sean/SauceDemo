@@ -21,6 +21,8 @@ public class checkoutPage {
     WebElement continueButton;
     @FindBy(how = How.ID, using = "finish") @CacheLookup
     WebElement finishButton;
+    @FindBy(how = How.ID, using = "checkout") @CacheLookup
+    WebElement checkoutButton;
     @FindBy(how = How.ID, using = "cancel") @CacheLookup
     WebElement cancelButton;
     public void setFirstName(String stringFirstName)
@@ -28,7 +30,6 @@ public class checkoutPage {
         try
         {
             firstName.sendKeys(stringFirstName);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -75,6 +76,15 @@ public class checkoutPage {
         try
         {
             cancelButton.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void checkoutButton()
+    {
+        try
+        {
+            checkoutButton.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
