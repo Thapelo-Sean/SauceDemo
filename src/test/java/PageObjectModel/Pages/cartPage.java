@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class cartPage {
-    public static WebDriver driver;
+    public WebDriver driver;
     public cartPage(WebDriver driver)
     {
         this.driver = driver;
