@@ -6,10 +6,10 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class inventoryPage {
+public class InventoryPage {
     WebDriver driver;
 
-    public inventoryPage(WebDriver driver)
+    public InventoryPage(WebDriver driver)
     {
         this.driver = driver;
     }

@@ -6,9 +6,9 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class checkoutPage {
+public class CheckoutPage {
     WebDriver driver;
-    public checkoutPage(WebDriver driver)
+    public CheckoutPage(WebDriver driver)
     {
         this.driver = driver;
     }
