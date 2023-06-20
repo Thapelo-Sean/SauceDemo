@@ -41,7 +41,7 @@ public class LoginTest extends testBase{
         loginPage.clickLoginButton();
     }
 
-/*
+
     //Verify login with valid username and valid password
     @Test(priority = 1)
     public void testCase1()
@@ -174,7 +174,7 @@ public class LoginTest extends testBase{
             e.printStackTrace();
         }
     }
-*/
+
 
     //verify login with empty username field and empty password
     @Test(priority = 6)
