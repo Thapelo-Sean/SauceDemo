@@ -6,22 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed55588-21cd-407d-804a-9d361b7012e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Testcases.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +59,21 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/test/java/PageObjectModel/Test/Test.XML">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SauceDemoProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SauceDemoProject" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/test/java/PageObjectModel/Test/Test.XML" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SauceDemo" />
+      <module name="SauceDemoProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/Test.XML" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
@@ -86,7 +83,7 @@
       </method>
     </configuration>
     <configuration name="C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SauceDemo" />
+      <module name="SauceDemoProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />

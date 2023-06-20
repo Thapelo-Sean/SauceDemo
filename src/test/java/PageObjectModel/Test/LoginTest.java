@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class LoginTest extends testBase{
+
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
     public static ExtentSparkReporter spark;
@@ -385,12 +386,14 @@ public class LoginTest extends testBase{
             checkoutPage.setLastName("Tester");
             checkoutPage.setPostalCode("45667");
             checkoutPage.continueButton();
+
+            //Capture screenshot for checkout overview
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T12.png"));
             checkoutPage.finishButton();
 
-            //capture screenshot
+            //capture screenshot for checkout complete
             TakesScreenshot screenshot1 = (TakesScreenshot)driver;
             File source1 = screenshot1.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source1, new File("./Screenshots/SAUC-T13.png"));
@@ -404,7 +407,6 @@ public class LoginTest extends testBase{
         {
             e.printStackTrace();
         }
-        extent.flush();
     }
 
     //verify logout functionality
@@ -434,5 +436,6 @@ public class LoginTest extends testBase{
         {
             e.printStackTrace();
         }
+        extent.flush();
     }
 }
