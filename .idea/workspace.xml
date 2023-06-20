@@ -6,11 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed55588-21cd-407d-804a-9d361b7012e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Testcases.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/testBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/testBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/loginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +60,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/main/resources"
+    "last_opened_file_path": "C:/Users/Katan/OneDrive/Desktop/MyAutomation/SauceDemo/src/main/resources",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -110,16 +123,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

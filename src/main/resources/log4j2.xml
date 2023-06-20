@@ -16,7 +16,7 @@
     <Loggers>
         <Logger name = "Info" level = "info" additivity = "false"> //name
             <AppenderRef ref = "LogFile" />
-            <AppenderRef ref = "Console" />
+
         </Logger>
         <Root level = "error">
             <AppenderRef ref = "Console"/>

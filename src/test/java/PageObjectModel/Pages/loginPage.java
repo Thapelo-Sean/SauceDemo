@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class loginPage {
-    private Logger logger = LogManager.getLogger("Info");
+    private final Logger logger = LogManager.getLogger("Info");
     WebDriver driver;
     public loginPage(WebDriver driver)
     {
@@ -51,5 +51,6 @@ public class loginPage {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        logger.info("Test Message");
     }
 }

@@ -1,11 +1,17 @@
 package PageObjectModel.Pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class checkoutPage {
+    WebDriver driver;
+    public checkoutPage(WebDriver driver)
+    {
+        this.driver = driver;
+    }
     //locate elements
     @FindBy(how = How.ID, using = "first-name") @CacheLookup
     WebElement firstName;
