@@ -1,13 +1,11 @@
 package PageObjectModel.Pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class checkoutPage {
-    WebDriver driver;
     //locate elements
     @FindBy(how = How.ID, using = "first-name") @CacheLookup
     WebElement firstName;
@@ -19,8 +17,7 @@ public class checkoutPage {
     WebElement continueButton;
     @FindBy(how = How.ID, using = "finish") @CacheLookup
     WebElement finishButton;
-/*    @FindBy(how = How.LINK_TEXT, using = "Checkout") @CacheLookup
-    WebElement checkoutButton;*/
+
     @FindBy(how = How.ID, using = "cancel") @CacheLookup
     WebElement cancelButton;
     public void setFirstName(String stringFirstName)
@@ -41,7 +38,7 @@ public class checkoutPage {
         }
     }
 
-    public void setpostalCode(String stringPostalCode) {
+    public void setPostalCode(String stringPostalCode) {
         try {
             postalCode.sendKeys(stringPostalCode);
         } catch (Exception e) {
@@ -78,13 +75,4 @@ public class checkoutPage {
             e.printStackTrace();
         }
     }
-/*    public void checkoutButton()
-    {
-        try
-        {
-            checkoutButton.click();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
 }
