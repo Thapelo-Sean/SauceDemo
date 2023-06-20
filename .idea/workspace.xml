@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed55588-21cd-407d-804a-9d361b7012e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Testcases.html" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Testcases.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T10.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T11.png" beforeDir="false" />
@@ -19,10 +20,8 @@
       <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T7.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T8.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenshots/SAUC-T9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/checkoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/inventoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Pages/loginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjectModel/Test/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

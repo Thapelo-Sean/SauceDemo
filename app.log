@@ -1,7 +1,22 @@
-2023-06-20 11:09:07,121 INFO Info {main} Test Message
-2023-06-20 11:09:10,037 INFO Info {main} Test Message
-2023-06-20 11:09:11,246 INFO Info {main} Test Message
-2023-06-20 11:09:12,106 INFO Info {main} Test Message
-2023-06-20 11:09:13,294 INFO Info {main} Test Message
-2023-06-20 11:09:13,938 INFO Info {main} Test Message
-2023-06-20 11:09:14,955 INFO Info {main} Test Message
+2023-06-20 11:21:41,241 INFO Info {main} <<<<<Executing Testcase 1>>>>>
+2023-06-20 11:21:42,159 INFO Info {main} Test Message
+2023-06-20 11:21:43,218 INFO Info {main} Screenshot for SAUC-T1 test case captured
+2023-06-20 11:21:43,266 INFO Info {main} <<<<<Testcase 1 executed>>>>>
+2023-06-20 11:21:43,302 INFO Info {main} <<<<<Executing Testcase 2>>>>>
+2023-06-20 11:21:43,819 INFO Info {main} Test Message
+2023-06-20 11:21:43,992 INFO Info {main} Screenshot for testcase 2 captured
+2023-06-20 11:21:44,154 INFO Info {main} <<<<<Testcase 2 executed>>>>>
+2023-06-20 11:21:44,157 INFO Info {main} <<<<<Executing Testcase 3
+2023-06-20 11:21:45,044 INFO Info {main} Test Message
+2023-06-20 11:21:45,288 INFO Info {main} <<<<<Testcase 3 executed>>>>>
+2023-06-20 11:21:45,291 INFO Info {main} <<<<<Executing Testcase 4>>>>>
+2023-06-20 11:21:45,763 INFO Info {main} Test Message
+2023-06-20 11:21:45,959 INFO Info {main} <<<<<Test case 4 executed>>>>>
+2023-06-20 11:21:46,073 INFO Info {main} <<<<<Executing Testcase 5>>>>>
+2023-06-20 11:21:46,580 INFO Info {main} Test Message
+2023-06-20 11:21:46,769 INFO Info {main} Screenshot for Testcase captured
+2023-06-20 11:21:46,769 INFO Info {main} <<<<<Testcase 5 executed>>>>>
+2023-06-20 11:21:46,920 INFO Info {main} <<<<<Executing Test case 6>>>>>
+2023-06-20 11:21:47,377 INFO Info {main} Test Message
+2023-06-20 11:21:47,572 INFO Info {main} <<<<<Testcase 6 executed>>>>>
+2023-06-20 11:21:48,329 INFO Info {main} Test Message
