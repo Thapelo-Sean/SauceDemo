@@ -10,6 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
@@ -214,25 +215,69 @@ public class loginTest extends testBase{
         }
     }
 
-    //Verify checkout information with empty firstname field
+    //Verify checkout with empty firstname field
     @Test(priority = 8)
     public void testcase8()
     {
         try
         {
             checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
-            checkoutPage.setFirstName("Software");
+            checkoutPage.setFirstName("");
             checkoutPage.setLastName("Tester");
             checkoutPage.setpostalCode("12345");
             Thread.sleep(2000);
             checkoutPage.continueButton();
             Thread.sleep(2000);
-            checkoutPage.finishButton();
-            Thread.sleep(2000);
+
             //Capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(source, new File("./Screenshots/checkout.png"));
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T8.png"));
+            //checkoutPage.finishButton();
+            //Thread.sleep(2000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Verify checkout with empty lastname field
+    @Test(priority = 10)
+    public void testCase10()
+    {
+        try
+        {
+            checkoutPage checkoutPage = PageFactory.initElements(driver, checkoutPage.class);
+            checkoutPage.setFirstName("Tester");
+            checkoutPage.setLastName("");
+            checkoutPage.setpostalCode("9876");
+            checkoutPage.continueButton();
+
+            //capture screenshot
+            TakesScreenshot screenshot = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T10.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //verify checkout with empty postal field
+    @Test(priority = 11)
+    public void testCase11()
+    {
+        try
+        {
+            checkoutPage checkoutPage = PageFactory.initElements((SearchContext) this,checkoutPage.class);
+            checkoutPage.setFirstName("John");
+            checkoutPage.setLastName("Doe");
+            checkoutPage.setpostalCode("");
+            checkoutPage.continueButton();
+
+            //Capture screenshot
+            TakesScreenshot screenshot  = (TakesScreenshot)driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(source, new File("./Screenshots/SAUC-T11"));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
