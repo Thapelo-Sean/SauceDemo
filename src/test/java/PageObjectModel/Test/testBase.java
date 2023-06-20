@@ -8,10 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-
 import java.util.concurrent.TimeUnit;
 
 public class testBase {
@@ -21,7 +19,7 @@ public class testBase {
 
     @BeforeTest
     @Parameters("browser")
-    public void browserSetup(String browser) throws Exception {
+    public void browserSetup(String browser) {
         try
         {
             if(browser.equalsIgnoreCase("chrome"))
