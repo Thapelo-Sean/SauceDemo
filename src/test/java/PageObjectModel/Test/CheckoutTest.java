@@ -242,5 +242,6 @@ public class CheckoutTest extends TestBase
         {
             e.printStackTrace();
         }
+        extent.flush();
     }
 }
