@@ -73,9 +73,7 @@ public class TestBase
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
             //Verify URL
-            String actualUrl = driver.getCurrentUrl();
-            String expectedUrl = "https://www.saucedemo.com/";
-            Assert.assertEquals(actualUrl,expectedUrl);
+            Assert.assertEquals(driver.getCurrentUrl(),baseUrl);
         } catch (Exception e)
         {
             e.printStackTrace();
