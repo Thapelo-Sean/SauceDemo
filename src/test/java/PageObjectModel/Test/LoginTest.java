@@ -20,7 +20,6 @@ import java.io.IOException;
 
 public class LoginTest extends TestBase
 {
-
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
     public static ExtentSparkReporter spark;
