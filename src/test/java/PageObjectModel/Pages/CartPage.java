@@ -8,14 +8,18 @@ import org.openqa.selenium.support.How;
 
 public class CartPage {
     public WebDriver driver;
+
+    //Constructor
     public CartPage(WebDriver driver)
     {
         this.driver = driver;
     }
 
+    //Locate element using @FindBy annotation
     @FindBy(how = How.ID, using = "checkout") @CacheLookup
     WebElement checkoutButton;
 
+    //Page Method
     public void checkoutButton()
     {
         checkoutButton.click();
