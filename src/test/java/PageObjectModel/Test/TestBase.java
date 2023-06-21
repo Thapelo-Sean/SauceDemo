@@ -1,6 +1,8 @@
 package PageObjectModel.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,6 +18,7 @@ public class TestBase {
 
     static WebDriver driver = null;
     public String baseUrl = "https://www.saucedemo.com/";
+    private Logger logger = LogManager.getLogger("Info");
 
     @BeforeTest
     @Parameters("browser")
@@ -32,7 +35,7 @@ public class TestBase {
                 WebDriverManager.safaridriver().setup();
                 driver = new SafariDriver();
             }
-            else if(browser.equalsIgnoreCase("Microsoft edge"))
+            else if(browser.equalsIgnoreCase("microsoft edge"))
             {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
@@ -55,6 +58,7 @@ public class TestBase {
     {
         try
         {
+            logger.info("<<<<<<<<<<Executing Test Cases..............");
             driver.get(baseUrl);
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
@@ -71,9 +75,10 @@ public class TestBase {
 
     //Close browser
     @AfterSuite
-    public void closeBrowser()
+    public void tearDown()
     {
+        if(driver!=null)
         driver.quit();
-        System.out.println("Executed");
+        logger.info("<<<<<<<<<<Tests successfully Executed>>>>>>>>>>");
     }
 }
