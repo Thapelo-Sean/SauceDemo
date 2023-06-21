@@ -20,6 +20,7 @@ public class LogoutTest extends TestBase
 
     static ExtentReports extent;
     static ExtentSparkReporter spark;
+    private final Logger logger = LogManager.getLogger("Info");
 
     @BeforeTest
     public void report()
@@ -28,8 +29,6 @@ public class LogoutTest extends TestBase
         spark = new ExtentSparkReporter("./Reports/LogoutReport.html");
         extent.attachReporter(spark);
     }
-
-    private final Logger logger = LogManager.getLogger("Info");
 
     //verify logout functionality
     @Test(priority = 13)
