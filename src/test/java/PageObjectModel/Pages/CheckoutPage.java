@@ -8,12 +8,14 @@ import org.openqa.selenium.support.How;
 
 public class CheckoutPage {
     WebDriver driver;
+
+    //Constructor
     public CheckoutPage(WebDriver driver)
     {
         this.driver = driver;
     }
 
-    //locate elements
+    //locate elements using @FindBy annotation
     @FindBy(how = How.ID, using = "first-name") @CacheLookup
     WebElement firstName;
     @FindBy(how = How.ID,using = "last-name") @CacheLookup
@@ -27,6 +29,7 @@ public class CheckoutPage {
     @FindBy(how = How.ID, using = "cancel") @CacheLookup
     WebElement cancelButton;
 
+    //Page methods
     public void setFirstName(String stringFirstName)
     {
         try
