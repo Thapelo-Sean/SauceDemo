@@ -13,10 +13,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import java.io.File;
 
-public class LogoutTest extends TestBase {
+public class LogoutTest extends TestBase
+{
 
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
