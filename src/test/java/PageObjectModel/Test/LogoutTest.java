@@ -59,5 +59,6 @@ public class LogoutTest extends TestBase
         {
             e.printStackTrace();
         }
+        extent.flush();
     }
 }
