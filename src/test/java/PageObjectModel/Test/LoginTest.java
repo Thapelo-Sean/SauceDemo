@@ -29,6 +29,8 @@ public class LoginTest extends TestBase
         extent = new ExtentReports();
         spark = new ExtentSparkReporter("./Reports/LoginReport.html");
         extent.attachReporter(spark);
+        spark.config().setReportName("Login Report");
+        spark.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a");
     }
 
     //Verify login with valid username and valid password
