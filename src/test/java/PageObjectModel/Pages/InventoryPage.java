@@ -9,12 +9,13 @@ import org.openqa.selenium.support.How;
 public class InventoryPage {
     WebDriver driver;
 
+    //Constructor
     public InventoryPage(WebDriver driver)
     {
         this.driver = driver;
     }
 
-    //Locate elements
+    //Locate elements using @FindBy annotation
     @FindBy(how = How.ID, using = "add-to-cart-sauce-labs-backpack") @CacheLookup
     WebElement addToCartBackPackButton;
     @FindBy(how = How.ID, using = "add-to-cart-sauce-labs-bike-light") @CacheLookup
@@ -26,6 +27,7 @@ public class InventoryPage {
     @FindBy(how = How.ID, using = "logout_sidebar_link") @CacheLookup
     WebElement logoutButton;
 
+    //Page methods
     public void addProductsToCart()
     {
         try
