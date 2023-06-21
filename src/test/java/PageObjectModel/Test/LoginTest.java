@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.io.File;
@@ -23,6 +24,11 @@ public class LoginTest extends TestBase
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
     public static ExtentSparkReporter spark;
+    public String inventoryUrl = "https://www.saucedemo.com/inventory.html";
+    public String cartPageUrl = "https://www.saucedemo.com/cart.html";
+    public String checkoutStep1PageUrl = "https://www.saucedemo.com/checkout-step-one.html";
+    public String checkoutStep2PageUrl = "https://www.saucedemo.com/checkout-step-two.html";
+    public String checkoutCompletePageUrl = "https://www.saucedemo.com/checkout-complete.html";
 
     @BeforeTest
     public void report()
@@ -51,6 +57,7 @@ public class LoginTest extends TestBase
             loginPage.setUsername("standard_user");
             loginPage.setPassword("secret_sauce");
             loginPage.clickLoginButton();
+            Assert.assertEquals(driver.getCurrentUrl(), inventoryUrl);
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
@@ -227,6 +234,7 @@ public class LoginTest extends TestBase
             InventoryPage inventorypage = PageFactory.initElements(driver, InventoryPage.class);
             inventorypage.addProductsToCart();
             inventorypage.shoppingCart();
+            Assert.assertEquals(driver.getCurrentUrl(),cartPageUrl);
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;
@@ -254,6 +262,7 @@ public class LoginTest extends TestBase
             CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             CheckoutPage checkoutPage = PageFactory.initElements(driver, CheckoutPage.class);
             cartPage.checkoutButton();
+            Assert.assertEquals(driver.getCurrentUrl(),checkoutStep1PageUrl);
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("Tester");
             checkoutPage.setPostalCode("12345");
@@ -286,6 +295,7 @@ public class LoginTest extends TestBase
             CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             CheckoutPage checkoutPage = PageFactory.initElements(driver, CheckoutPage.class);
             cartPage.checkoutButton();
+            Assert.assertEquals(driver.getCurrentUrl(),checkoutStep1PageUrl);
             checkoutPage.setFirstName("");
             checkoutPage.setLastName("");
             checkoutPage.setPostalCode("");
@@ -318,6 +328,7 @@ public class LoginTest extends TestBase
             CheckoutPage checkoutPage = PageFactory.initElements(driver, CheckoutPage.class);
             CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             cartPage.checkoutButton();
+            Assert.assertEquals(driver.getCurrentUrl(),checkoutStep1PageUrl);
             checkoutPage.setFirstName("Tester");
             checkoutPage.setLastName("");
             checkoutPage.setPostalCode("9876");
@@ -350,6 +361,7 @@ public class LoginTest extends TestBase
             CheckoutPage checkoutPage = PageFactory.initElements(driver, CheckoutPage.class);
             CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             cartPage.checkoutButton();
+            Assert.assertEquals(driver.getCurrentUrl(),checkoutStep1PageUrl);
             checkoutPage.setFirstName("John");
             checkoutPage.setLastName("Doe");
             checkoutPage.setPostalCode("");
@@ -382,16 +394,19 @@ public class LoginTest extends TestBase
             CheckoutPage checkoutPage = PageFactory.initElements(driver, CheckoutPage.class);
             CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
             cartPage.checkoutButton();
+            Assert.assertEquals(driver.getCurrentUrl(),checkoutStep1PageUrl);
             checkoutPage.setFirstName("Software");
             checkoutPage.setLastName("Tester");
             checkoutPage.setPostalCode("45667");
             checkoutPage.continueButton();
+            Assert.assertEquals(driver.getCurrentUrl(), checkoutStep2PageUrl);
 
             //Capture screenshot for checkout overview
             TakesScreenshot screenshot = (TakesScreenshot)driver;
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(source, new File("./Screenshots/SAUC-T12.png"));
             checkoutPage.finishButton();
+            Assert.assertEquals(driver.getCurrentUrl(), checkoutCompletePageUrl);
 
             //capture screenshot for checkout complete
             TakesScreenshot screenshot1 = (TakesScreenshot)driver;
@@ -421,6 +436,7 @@ public class LoginTest extends TestBase
             Thread.sleep(300);
             inventoryPage.logoutButton();
             Thread.sleep(300);
+            Assert.assertEquals(baseUrl,driver.getCurrentUrl());
 
             //capture screenshot
             TakesScreenshot screenshot = (TakesScreenshot)driver;

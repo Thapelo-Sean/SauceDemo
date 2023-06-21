@@ -52,3 +52,31 @@
 2023-06-21 09:31:14,983 INFO Info {main} <<<<<Executing Test case 12>>>>>
 2023-06-21 09:31:16,099 INFO Info {main} <<<<<Testcase 12 executed>>>>>
 2023-06-21 09:31:19,821 INFO Info {main} <<<<<<<<<<Tests successfully Executed>>>>>>>>>>
+2023-06-21 10:11:31,956 INFO Info {main} <<<<<<<<<<Executing Test Cases..............
+2023-06-21 10:11:37,751 INFO Info {main} <<<<<Executing Testcase 1>>>>>
+2023-06-21 10:11:40,900 INFO Info {main} <<<<<Testcase 1 executed>>>>>
+2023-06-21 10:11:41,021 INFO Info {main} <<<<<Executing Testcase 2>>>>>
+2023-06-21 10:11:41,979 INFO Info {main} <<<<<Testcase 2 executed>>>>>
+2023-06-21 10:11:41,983 INFO Info {main} <<<<<Executing Testcase 3
+2023-06-21 10:11:42,839 INFO Info {main} <<<<<Testcase 3 executed>>>>>
+2023-06-21 10:11:42,845 INFO Info {main} <<<<<Executing Testcase 4>>>>>
+2023-06-21 10:11:43,478 INFO Info {main} <<<<<Test case 4 executed>>>>>
+2023-06-21 10:11:43,568 INFO Info {main} <<<<<Executing Testcase 5>>>>>
+2023-06-21 10:11:44,232 INFO Info {main} <<<<<Testcase 5 executed>>>>>
+2023-06-21 10:11:44,344 INFO Info {main} <<<<<Executing Test case 6>>>>>
+2023-06-21 10:11:44,890 INFO Info {main} <<<<<Testcase 6 executed>>>>>
+2023-06-21 10:11:44,896 INFO Info {main} <<<<<Executing Test case 7>>>>>
+2023-06-21 10:11:46,113 INFO Info {main} <<<<<Testcase 7 executed>>>>>
+2023-06-21 10:11:46,121 INFO Info {main} <<<<<Executing Test case 8>>>>>
+2023-06-21 10:11:47,160 INFO Info {main} <<<<<Testcase 8 executed>>>>>
+2023-06-21 10:11:47,165 INFO Info {main} <<<<<Executing Test case 9>>>>>
+2023-06-21 10:11:47,913 INFO Info {main} <<<<<Testcase 9 executed>>>>>
+2023-06-21 10:11:47,915 INFO Info {main} <<<<<Executing Test case 10>>>>>
+2023-06-21 10:11:48,744 INFO Info {main} <<<<<Testcase 10 executed>>>>>
+2023-06-21 10:11:48,748 INFO Info {main} <<<<<Executing Test case 11>>>>>
+2023-06-21 10:11:49,638 INFO Info {main} <<<<<Testcase 11 executed>>>>>
+2023-06-21 10:11:49,641 INFO Info {main} <<<<<Executing Test case 12>>>>>
+2023-06-21 10:11:50,750 INFO Info {main} <<<<<Testcase 12 executed>>>>>
+2023-06-21 10:11:50,754 INFO Info {main} <<<<<Executing Test case 12>>>>>
+2023-06-21 10:11:51,901 INFO Info {main} <<<<<Testcase 12 executed>>>>>
+2023-06-21 10:11:56,647 INFO Info {main} <<<<<<<<<<Tests successfully Executed>>>>>>>>>>
