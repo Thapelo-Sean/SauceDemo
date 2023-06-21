@@ -14,15 +14,17 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public class TestBase
+{
 
     static WebDriver driver = null;
     public String baseUrl = "https://www.saucedemo.com/";
-    private Logger logger = LogManager.getLogger("Info");
+    private final Logger logger = LogManager.getLogger("Info");
 
     @BeforeTest
     @Parameters("browser")
-    public void browserSetup(String browser) {
+    public void browserSetup(String browser)
+    {
         try
         {
             if(browser.equalsIgnoreCase("chrome"))
@@ -49,7 +51,8 @@ public class TestBase {
             {
                 throw new Exception("Incorrect browser");
             }
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -62,13 +65,14 @@ public class TestBase {
             driver.get(baseUrl);
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
             //Verify URL
             String actualUrl = driver.getCurrentUrl();
             String expectedUrl = "https://www.saucedemo.com/";
             Assert.assertEquals(actualUrl,expectedUrl);
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -78,7 +82,9 @@ public class TestBase {
     public void tearDown()
     {
         if(driver!=null)
-        driver.quit();
+        {
+            driver.quit();
+        }
         logger.info("<<<<<<<<<<Tests successfully Executed>>>>>>>>>>");
     }
 }
