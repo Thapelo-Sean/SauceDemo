@@ -17,9 +17,14 @@ import java.util.concurrent.TimeUnit;
 public class TestBase
 {
 
-    static WebDriver driver = null;
     public String baseUrl = "https://www.saucedemo.com/";
+    public String inventoryUrl = "https://www.saucedemo.com/inventory.html";
+    public String cartPageUrl = "https://www.saucedemo.com/cart.html";
+    public String checkoutStep1PageUrl = "https://www.saucedemo.com/checkout-step-one.html";
+    public String checkoutStep2PageUrl = "https://www.saucedemo.com/checkout-step-two.html";
+    public String checkoutCompletePageUrl = "https://www.saucedemo.com/checkout-complete.html";
     private final Logger logger = LogManager.getLogger("Info");
+    static WebDriver driver = null;
 
     @BeforeTest
     @Parameters("browser")
