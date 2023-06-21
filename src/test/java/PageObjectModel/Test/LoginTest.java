@@ -204,5 +204,6 @@ public class LoginTest extends TestBase
         {
             e.printStackTrace();
         }
+        extent.flush();
     }
 }
