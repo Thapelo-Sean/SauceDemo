@@ -16,11 +16,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import java.io.File;
 import java.io.IOException;
 
-public class CheckoutTest extends TestBase {
+public class CheckoutTest extends TestBase
+{
+
     private final Logger logger = LogManager.getLogger("Info");
     public static ExtentReports extent;
     public static ExtentSparkReporter spark;
