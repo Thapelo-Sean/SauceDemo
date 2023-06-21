@@ -24,6 +24,7 @@ public class CheckoutTest extends TestBase
 
     static ExtentReports extent;
     static ExtentSparkReporter spark;
+    private final Logger logger = LogManager.getLogger("Info");
 
     @BeforeTest
     public void report()
@@ -32,7 +33,6 @@ public class CheckoutTest extends TestBase
         spark = new ExtentSparkReporter("./Reports/CheckoutReport.html");
         extent.attachReporter(spark);
     }
-    private final Logger logger = LogManager.getLogger("Info");
 
     public void login()
     {
