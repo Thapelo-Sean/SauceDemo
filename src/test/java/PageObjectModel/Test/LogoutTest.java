@@ -28,6 +28,8 @@ public class LogoutTest extends TestBase
         extent = new ExtentReports();
         spark = new ExtentSparkReporter("./Reports/LogoutReport.html");
         extent.attachReporter(spark);
+        spark.config().setReportName("Login Test Report");
+        spark.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a");
     }
 
     //verify logout functionality
