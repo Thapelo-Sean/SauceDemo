@@ -1,6 +1,5 @@
 package PageObjectModel.Test;
 
-import com.aventstack.extentreports.ExtentReports;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,7 +25,6 @@ public class TestBase
     public String checkoutCompletePageUrl = "https://www.saucedemo.com/checkout-complete.html";
     private final Logger logger = LogManager.getLogger("Info");
     static WebDriver driver = null;
-    ExtentReports extent;
 
     @BeforeTest
     @Parameters("browser")
@@ -88,7 +86,6 @@ public class TestBase
     {
         if(driver!=null)
         {
-            extent.flush();
             driver.quit();
         }
         logger.info("<<<<<<<<<<Tests successfully Executed>>>>>>>>>>");
