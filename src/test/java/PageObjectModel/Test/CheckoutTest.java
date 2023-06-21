@@ -32,6 +32,8 @@ public class CheckoutTest extends TestBase
         extent = new ExtentReports();
         spark = new ExtentSparkReporter("./Reports/CheckoutReport.html");
         extent.attachReporter(spark);
+        spark.config().setReportName("Checkout Test Report");
+        spark.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a");
     }
 
     public void login()
